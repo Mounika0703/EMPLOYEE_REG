@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{empfName}}</title>
+    <link rel="icon" href="images/images.jpg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>     
+    {{>navbar}}
+    <div class="home">
+        <img src="images/images.jpg" alt="MK"/>
+        <h1 style="text-align: center;">Employee Details</h1>
+        <div class="details">
+            <div class="det">First Name : {{empfName}}</div>
+            <div class="det">Last Name : {{emplName}}</div>
+            <div class="det">Email : {{empEmail}}</div>
+            <div class="det">Phone : {{empPhone}}</div>
+            <div class="det">Age : {{empAge}}</div>
+            <div class="det">Gender : {{empGender}}</div>
+        </div>
+
+    </div>
+    {{>footer}}
+</body>
+</html>

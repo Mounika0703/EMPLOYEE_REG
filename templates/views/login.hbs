@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>head}}
+<body>    
+    {{>navbar}}     
+    
+    <div class="reg">
+        <div class="main">
+            <div class="left">
+                <h1>WELCOME</h1>
+                <h2>Don't have an account yet!!! <br> please register before login</h2>
+            </div>
+            <div class="right">
+               
+                <h1>Employee login</h1>
+                <form action="/login" method="POST">
+                    
+                    <div class="form-middle">
+                        <input type="email" placeholder="email*" name="email" id="email" required>
+                        <input type="password" placeholder="Password*" name="password" id="cpsw" required>
+                        <div class="button">
+                            <button  btn="loginbtn" type="submit">Sign in</button>
+                        </div>
+                        <div class="extra-links">
+                            <a href="/" class="need-help">Need Help?</a>
+                            <a href="/register" class="new-account">Create an Account</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    {{>footer}}
+</body>
+</html>

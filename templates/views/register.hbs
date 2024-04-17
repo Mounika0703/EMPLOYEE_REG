@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>head}}
+<body>    
+    {{>navbar}}     
+    
+    <div class="reg">
+        <div class="main">
+            <div class="left">
+                <h1>WELCOME</h1>
+                <h2>please enter the details</h2>
+            </div>
+            <div class="right">
+              {{!--  <div class="toggle">
+                    <button>
+                        <div class="outer">
+                            <div class="inner1">Registration</div>
+                            <div class="inner2">Login</div>
+                        </div>
+                    </button>
+                </div>--}}
+                <h1 style="max-width: 100%;">Employee Registration</h1>
+                <form action="/register" method="POST">
+                    <div class="form-left">
+                        <input type="text" placeholder="First Name*" name="firstname" id="fname" required>
+                        <input type="text" placeholder="Last Name*" name="lastname" id="lname" required>
+                        <input type="email" placeholder="Your Email*" name="email" id="email" required>
+                        <input type="number" placeholder="Your Phone*" name="phone" id="phone" required>
+                    </div>
+                    <div class="form-right">
+                        <input type="number" placeholder="Enter your age*" name="age" id="age" required>
+                        <input class="radio" type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
+                        <input class="radio" type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label><br>
+                        <input type="password" placeholder="Password*" name="password" id="psw" required>
+                        <input type="password" placeholder="confirm Password*" name="confirmpassword" id="cpsw" required>
+                        <div class="button">
+                            <button type="submit" id="regbtn">Register</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    {{>footer}}
+</body>
+</html>

@@ -1,0 +1,14 @@
+<header>
+        <a href="#" class="logo" style="color: white;"><b><i>MK</i></b></a>
+        <ul class="navigation">
+            {{#if logined}}
+            <li><a href="details">Details</a></li>
+            <li><a href="logout">Logout</a></li>
+            {{else}}
+            <li><a href="/">Home</a></li>
+            <li><a  href="login">Login</a></li>
+            <!--<li><a  href="logout">Logout</a></li>-->
+            <li><a href="register">Register</a></li>
+            {{/if}}
+        </ul>
+</header>
