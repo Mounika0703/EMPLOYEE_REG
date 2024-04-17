@@ -78,7 +78,7 @@ app.post("/register",async(req,res)=>{
                     {phone:req.body.phone}
                 ]});
                 if(user){
-                    res.send('<script>alert("Email or Phone already exists"); window.location.href = "/register"; </script>');
+                    res.send('<script>alert("Email or Phone already exists"); history.back(); </script>');
                 }
                 else{
                     const registerEmployee=new Register({
@@ -106,22 +106,10 @@ app.post("/register",async(req,res)=>{
                 }
             }else{
                 //res.send("password is not matching");
-                res.send('<script>alert("Password is not matching"); window.location.href = "/register"; </script>');
-    //             res.send(`
-    //             <script>
-    //                 alert("Password is not matching");
-    //                 window.location.href = "/register";
-    //                 document.getElementById('fname').value = '${req.body.firstname}';
-    //                 document.getElementById('lname').value = '${req.body.lastname}';
-    //                 document.getElementById('age').value = '${req.body.age}';
-    //                 document.getElementById('phone').value = '${req.body.phone}';
-    //                 document.getElementById('gender').value = '${req.body.gender}';
-    //                 document.getElementById('email').value = '${req.body.email}';
-    //             </script>
-    // `           );        
+                res.send('<script>alert("Password is not matching"); history.back(); </script>');
             }
         }else{
-            res.send('<script>alert("Enter a valid Phone number"); window.location.href = "/register"; </script>');
+            res.send('<script>alert("Enter a valid Phone number"); history.back(); </script>');
         }
     }catch(error){
         //res.status(400).send(error);
@@ -151,11 +139,11 @@ app.post("/login",async(req,res)=>{
             });
         }else{
             //res.send("Incorrect Login Details");
-            res.send('<script>alert("Invalid Login Details"); window.location.href = "/login"; </script>');
+            res.send('<script>alert("Invalid Login Details"); history.back(); </script>');
         }
     }catch(error){
         //res.status(400).send("Invalid Email");
-        res.send('<script>alert("Please Register before you Login"); window.location.href = "/login"; </script>');
+        res.send('<script>alert("Please Register before you Login"); history.back(); </script>');
     }
 })
 
